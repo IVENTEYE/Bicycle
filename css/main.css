@@ -141,15 +141,6 @@ h2 {
   padding: 120px 0;
 }
 
-.info__block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  text-align: center;
-}
-
 .block {
   display: flex;
   justify-content: center;
@@ -624,11 +615,15 @@ h2 {
     background-color: #4d4959;
     padding: 150px 0 20px 0;
     overflow: auto;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
     transform: translateY(-100%);
   }
 
   .menu-body.active {
     transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
   }
 
   .menu__link {

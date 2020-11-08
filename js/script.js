@@ -3,10 +3,12 @@ let menu = document.querySelector(".menu__icon"),
 
 menu.addEventListener("click", () => {
   menu.classList.toggle("active");
-});
-
-menu.addEventListener("click", () => {
   menu__body.classList.toggle("active");
+  if (menu__body.classList.contains('active')) {
+    document.body.style.overflowY = 'hidden';
+  } else {
+    document.body.style.overflowY = 'visible';
+  }
 });
 
 $('.slider__body').slick({
